@@ -12,18 +12,19 @@
             <div class="col-md-8col-md-offset-2">
                 <div class="panelpanel-defailt">
                     <div class="panel-heading">
-                        <h2> {{$student->student_name}} Details<a href="/" class="btn btn-primary">Home</a></h2>
+                        <a href="/" class="btn btn-primary">Home</a><br>
+                        <h2> {{$student->student_name}} Fees Details</h2>
                     </div>
                     <div class="panel-body">
-                        <table>
+                        <table class="table">
                             <tr>
                                 <th>Amount</th>
                                 <th>Date Paid</th>
                             </tr>
                             @foreach ($student->fees as $fee)
                                 <tr>
-                                    <td>$fee->amount</td>
-                                    <td>$fee->created_at</td>
+                                    <td>{{$fee->amount}}</td>
+                                    <td>{{$fee->created_at}}</td>
                                 </tr>
                             @endforeach
                         </table>

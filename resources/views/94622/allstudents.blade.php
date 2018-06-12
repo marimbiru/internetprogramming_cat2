@@ -11,7 +11,10 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading"><h2>Student List</h2><a href="/" class="btn btn-primary">Home</a></div>
+                    <div class="panel-heading"><a href="/" class="btn btn-primary">Home</a><h2>Student List</h2>
+                    @if ($search)
+                        <h4>Search results for :"{{$search}}"</h4>
+                    @endif</div>
                     <div class="panel-body">
                         <table class="table">
                             <tr>

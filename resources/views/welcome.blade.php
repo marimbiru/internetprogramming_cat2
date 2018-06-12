@@ -88,10 +88,10 @@
                 </div>
 
                 <div class="links" style="margin-top: 40px">
-                    <form action="/findstudent">
+                    <form action="/findstudent" method="POST">
                         {{ csrf_field() }}
                         <label for="name" style="font-weight: bold; margin-right: 3px">Search for Student</label>
-                        <input type="text" name="name"  placeholder="Enter student name">
+                        <input type="text" name="name" style="font-weight: 5px">
                         <button type="submit" class="btn btn-default">Search</button>
                     </form>
                 </div>

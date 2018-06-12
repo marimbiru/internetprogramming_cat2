@@ -54,10 +54,12 @@ class StudentController extends Controller
         $this->validate($request, array(
             'name'=>'required'
         ));
+
         $name=$request->name;
 
-        $students=Student::where('student_name','LIKE','%',$name,'%');
+        $students=Student::where('student_name','LIKE','%'.$name.'%')->get();
+        $search=$name;
 
-        return view('allstudents',['students'=>$students]);
+        return view('94622/allstudents',['students'=>$students,'search'=>$search]);
     }
 }
